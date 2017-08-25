@@ -76,4 +76,4 @@ meltDataMeanAndStd <- melt(dataMeanAndStd, id = idVars, measure.vars = measureVa
 
 # Get the average of each variable for each activity and each subject
 tidyData <- dcast(meltDataMeanAndStd, subject + activityclass ~ variable, mean)
-write.table(tidyData, file = ".\\tidy_data.txt")
+write.table(tidyData, file = ".\\tidy_data.txt", row.name = FALSE)
